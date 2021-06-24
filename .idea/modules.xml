@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CS525-AdvancedSoftwareDevelopment.iml" filepath="$PROJECT_DIR$/CS525-AdvancedSoftwareDevelopment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab01-StrategyDP/Lab01-StrategyDP.iml" filepath="$PROJECT_DIR$/Lab01-StrategyDP/Lab01-StrategyDP.iml" />
+    </modules>
+  </component>
+</project>
