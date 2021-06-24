@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CS525-AdvancedSoftwareDevelopment.iml" filepath="$PROJECT_DIR$/CS525-AdvancedSoftwareDevelopment.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab01-StrategyDP/Lab01-StrategyDP.iml" filepath="$PROJECT_DIR$/Lab01-StrategyDP/Lab01-StrategyDP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab02-ObserverDP/Lab02-ObserverDP.iml" filepath="$PROJECT_DIR$/Lab02-ObserverDP/Lab02-ObserverDP.iml" />
     </modules>
   </component>
 </project>
