@@ -1,10 +1,10 @@
 package main.java.edu.mum.cs.cs525.labs.skeleton;
 
 public class SMSSender implements Observer {
-    AccountChangeSubject subject;
+//    AccountChangeSubject subject;
 
     public SMSSender(AccountChangeSubject subject) {
-        this.subject = subject;
+//        this.subject = subject;
         subject.registerChangeSubscriber(this);
     }
 
