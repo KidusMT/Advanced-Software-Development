@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/Lab03-DecoratorDP/Lab03-DecoratorDP.iml" filepath="$PROJECT_DIR$/Lab03-DecoratorDP/Lab03-DecoratorDP.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/test2-forlab02/test2-forlab02.iml" filepath="$PROJECT_DIR$/test2-forlab02/test2-forlab02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testForLab03/testForLab03.iml" filepath="$PROJECT_DIR$/testForLab03/testForLab03.iml" />
     </modules>
   </component>
 </project>

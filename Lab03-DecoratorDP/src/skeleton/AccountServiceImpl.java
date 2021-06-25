@@ -35,6 +35,7 @@ public class AccountServiceImpl implements AccountService {
         accountAbstract=new P1(accountAbstract);
         accountAbstract=new P2(accountAbstract);
         accountAbstract=new P3(accountAbstract);
+//        System.out.println("===---->"+accountAbstract.getCustomer());
         account.addInterest(accountAbstract.addInterest(account.getBalance()));
         return accountAbstract.addInterest(account.getBalance());
     }
