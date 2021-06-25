@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class Account {
+public class Account extends InterestStrategy{
 	private Customer customer;
 
 	private String accountNumber;
@@ -82,4 +82,8 @@ public class Account {
 		return entryList;
 	}
 
+	@Override
+	double addInterest(double balance) {
+		return interestStrategy.addInterest(balance);
+	}
 }

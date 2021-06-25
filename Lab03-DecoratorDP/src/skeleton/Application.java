@@ -18,6 +18,10 @@ public class Application {
 		// add interest
 		accountService.addInterest();
 
+		// adding promotion
+		System.out.println("Promotional Interest: "+accountService.addPromotionInterest("4253892") +" for bank account: 4253892");
+		System.out.println("Promotional Interest: "+accountService.addPromotionInterest("1263862") +" for bank account: 1263862");
+
 		// show balances
 		for (Account account : accountService.getAllAccounts()) {
 			Customer customer = account.getCustomer();

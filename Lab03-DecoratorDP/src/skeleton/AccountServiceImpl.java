@@ -28,6 +28,17 @@ public class AccountServiceImpl implements AccountService {
         return account;
     }
 
+    @Override
+    public double addPromotionInterest(String accountNumber) {
+        Account account = accountDAO.loadAccount(accountNumber);
+        InterestStrategy accountAbstract=account;
+        accountAbstract=new P1(accountAbstract);
+        accountAbstract=new P2(accountAbstract);
+        accountAbstract=new P3(accountAbstract);
+        account.addInterest(accountAbstract.addInterest(account.getBalance()));
+        return accountAbstract.addInterest(account.getBalance());
+    }
+
     public void deposit(String accountNumber, double amount) {
         Account account = accountDAO.loadAccount(accountNumber);
         account.deposit(amount);

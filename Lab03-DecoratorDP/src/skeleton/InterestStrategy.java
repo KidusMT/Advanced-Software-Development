@@ -1,5 +1,5 @@
 package skeleton;
 
-public interface InterestStrategy {
-    double addInterest(double balance);
+public abstract class InterestStrategy {
+    abstract double addInterest(double balance);
 }

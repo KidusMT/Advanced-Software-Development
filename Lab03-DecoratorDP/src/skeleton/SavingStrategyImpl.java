@@ -1,6 +1,6 @@
 package skeleton;
 
-public class SavingStrategyImpl implements InterestStrategy {
+public class SavingStrategyImpl extends InterestStrategy {
 
     @Override
     public double addInterest(double balance) {
