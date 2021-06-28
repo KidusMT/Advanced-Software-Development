@@ -1,8 +1,9 @@
-package main.java.edu.mum.cs.cs525.labs.skeleton;
+package skeleton;
 
 public class Application {
 	public static void main(String[] args) {
-		AccountService accountService = new AccountServiceImpl(new MockAccountDAO());
+		AccountServiceFactory serviceFactory = new AccountServiceFactory();
+		AccountService accountService = serviceFactory.createAccountService("Production");
 
 		// create 2 accounts;
 		accountService.createAccount("1263862", "Frank Brown");

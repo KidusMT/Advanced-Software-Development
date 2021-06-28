@@ -1,11 +1,15 @@
-package main.java.edu.mum.cs.cs525.labs.skeleton;
+package skeleton;
 
 import java.util.Collection;
 
-public class AccountServiceImpl implements AccountService {
+public abstract class AccountServiceImpl implements AccountService {
 	private AccountDAO accountDAO;
 	
-	public AccountServiceImpl(AccountDAO accountDAO){
+	public AccountServiceImpl(){
+		accountDAO = new AccountDAOImpl();
+	}
+
+	public void setAccountDAO(AccountDAO accountDAO){
 		this.accountDAO = accountDAO;
 	}
 

@@ -1,8 +1,8 @@
-package main.java.edu.mum.cs.cs525.labs.skeleton;
+package skeleton;
 
 import java.util.Collection;
 
-public interface AccountService extends Service {
+public interface AccountService {
     Account createAccount(String accountNumber, String customerName);
     Account getAccount(String accountNumber);
     Collection<Account> getAllAccounts();
