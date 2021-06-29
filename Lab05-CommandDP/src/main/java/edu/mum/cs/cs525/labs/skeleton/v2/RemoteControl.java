@@ -19,7 +19,17 @@ public class RemoteControl {
         this.commands[slot].execute();
     }
 
-    public void startButtonUnClicked(int slot){
+    public void startButtonUnClicked(int slot) {
         this.commands[slot].undo();
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("\n------ Remote Control ------\n");
+        for (int i = 0; i < commands.length; i++) {
+            sb.append("[ Slot ").append(i).append(" ]  ").append(commands[i].getClass().getSimpleName()).append(" \n");
+        }
+        return sb.toString();
     }
 }
