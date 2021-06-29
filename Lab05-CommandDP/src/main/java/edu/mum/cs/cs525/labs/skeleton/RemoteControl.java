@@ -2,15 +2,24 @@ package main.java.edu.mum.cs.cs525.labs.skeleton;
 
 public class RemoteControl {
 
-    Command command;
+    Command[] commands;
 
-    public RemoteControl() {}
-
-    public void setCommands(Command command) {
-        this.command = command;
+    public RemoteControl() {
+        this.commands = new Command[10];
+        for (int i = 0; i < 10; i++) {
+            this.commands[i] = new NoCommand();
+        }
     }
 
-    public void startButtonClicked() {
-        this.command.execute();
+    public void setCommands(int slot, Command command) {
+        this.commands[slot] = command;
+    }
+
+    public void startButtonClicked(int slot) {
+        this.commands[slot].execute();
+    }
+
+    public void startButtonUnClicked(int slot){
+        this.commands[slot].undo();
     }
 }

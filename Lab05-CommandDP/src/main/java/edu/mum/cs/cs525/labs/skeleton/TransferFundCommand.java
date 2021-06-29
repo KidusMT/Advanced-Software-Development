@@ -24,5 +24,6 @@ public class TransferFundCommand implements Command {
     @Override
     public void undo() {
         // transfer the money back to the account, swapping the "from" and "to" of the accountNumber parameters
+        accountService.transferFunds(toAccountNumber, fromAccountNumber, amount, description);
     }
 }

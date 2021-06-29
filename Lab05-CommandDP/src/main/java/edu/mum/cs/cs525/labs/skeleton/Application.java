@@ -24,17 +24,24 @@ public class Application {
 //		accountService.transferFunds("4253892", "1263862", 100, "payment of invoice 10232");
 		// show balances
 
-		remoteControl.setCommands(depositCommand1);
-		remoteControl.startButtonClicked();
-		remoteControl.setCommands(depositCommand12);
-		remoteControl.startButtonClicked();
-		remoteControl.setCommands(withdrawCommand1);
-		remoteControl.startButtonClicked();
+		remoteControl.setCommands(0, depositCommand1);
+		remoteControl.setCommands(1, depositCommand12);
+		remoteControl.setCommands(2, withdrawCommand1);
 
-		remoteControl.setCommands(depositCommand2);
-		remoteControl.startButtonClicked();
-		remoteControl.setCommands(transferFundCommand2);
-		remoteControl.startButtonClicked();
+		remoteControl.setCommands(3, depositCommand2);
+		remoteControl.setCommands(4, transferFundCommand2);
+
+		remoteControl.startButtonClicked(0);
+		remoteControl.startButtonClicked(1);
+		remoteControl.startButtonClicked(2);
+		remoteControl.startButtonClicked(3);
+		remoteControl.startButtonClicked(4);
+
+		remoteControl.startButtonUnClicked(0);
+		remoteControl.startButtonUnClicked(1);
+		remoteControl.startButtonUnClicked(2);
+		remoteControl.startButtonUnClicked(3);
+		remoteControl.startButtonUnClicked(4);
 
 		for (Account account : accountService.getAllAccounts()) {
 			Customer customer = account.getCustomer();

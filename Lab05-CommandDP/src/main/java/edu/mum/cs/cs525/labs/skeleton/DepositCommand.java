@@ -20,5 +20,6 @@ public class DepositCommand implements Command {
     @Override
     public void undo() {
         // withdraw the amount of money deposited from the account
+        accountService.withdraw(accountNumber, amount);
     }
 }
