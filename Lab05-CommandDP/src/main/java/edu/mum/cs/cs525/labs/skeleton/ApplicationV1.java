@@ -1,6 +1,6 @@
 package main.java.edu.mum.cs.cs525.labs.skeleton;
 
-public class Application {
+public class ApplicationV1 {
 	public static void main(String[] args) {
 		RemoteControl remoteControl = new RemoteControl();
 
