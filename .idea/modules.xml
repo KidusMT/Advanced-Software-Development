@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/Lab03-DecoratorDP/Lab03-DecoratorDP.iml" filepath="$PROJECT_DIR$/Lab03-DecoratorDP/Lab03-DecoratorDP.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab04-FactoryDP/Lab04-FactoryDP.iml" filepath="$PROJECT_DIR$/Lab04-FactoryDP/Lab04-FactoryDP.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab05-CommandDP/Lab05-CommandDP.iml" filepath="$PROJECT_DIR$/Lab05-CommandDP/Lab05-CommandDP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab06-AdapterDP/Lab06-AdapterDP/Lab06-AdapterDP.iml" filepath="$PROJECT_DIR$/Lab06-AdapterDP/Lab06-AdapterDP/Lab06-AdapterDP.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/test2-forlab02/test2-forlab02.iml" filepath="$PROJECT_DIR$/test2-forlab02/test2-forlab02.iml" />
       <module fileurl="file://$PROJECT_DIR$/testFactoryMethod/testFactoryMethod.iml" filepath="$PROJECT_DIR$/testFactoryMethod/testFactoryMethod.iml" />
