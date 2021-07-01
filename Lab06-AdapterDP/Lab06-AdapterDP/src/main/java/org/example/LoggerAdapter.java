@@ -2,7 +2,7 @@ package org.example;
 
 public class LoggerAdapter implements Logger {
 
-    org.apache.logging.log4j.Logger logger;
+    org.apache.logging.log4j.Logger logger;// this is the adaptee
 
     public LoggerAdapter(org.apache.logging.log4j.Logger logger) {
         this.logger = logger;

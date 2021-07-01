@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Lab06-AdapterDP" target="1.7" />
+      <module name="Lab06-AdapterDP" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
