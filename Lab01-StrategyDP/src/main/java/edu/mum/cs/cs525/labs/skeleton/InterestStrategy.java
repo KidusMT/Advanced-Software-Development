@@ -1,5 +1,5 @@
 package main.java.edu.mum.cs.cs525.labs.skeleton;
 
-public interface InterestFunctionalities {
+public interface InterestStrategy {
     double addInterest(double balance);
 }

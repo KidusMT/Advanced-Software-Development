@@ -23,14 +23,14 @@ public class Account {
 		this.accountNumber = accountNumber;
 	}
 
-	public InterestFunctionalities interestFunctionalities;
+	public InterestStrategy interestStrategy;
 
-	public void setInterestFunc(InterestFunctionalities newInterestFunctionalities){
-		interestFunctionalities = newInterestFunctionalities;
+	public void setInterestFunc(InterestStrategy newInterestStrategy){
+		interestStrategy = newInterestStrategy;
 	}
 
 	public void addInterest(){
-		double interest = interestFunctionalities.addInterest(getBalance());
+		double interest = interestStrategy.addInterest(getBalance());
 
 		AccountEntry accountEntry = new AccountEntry(interest, "interest", "", "");
 

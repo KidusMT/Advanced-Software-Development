@@ -1,6 +1,6 @@
 package main.java.edu.mum.cs.cs525.labs.skeleton;
 
-public class CheckingInterestCalc implements InterestFunctionalities {
+public class CheckingStrategy implements InterestStrategy {
 
     @Override
     public double addInterest(double balance) {
