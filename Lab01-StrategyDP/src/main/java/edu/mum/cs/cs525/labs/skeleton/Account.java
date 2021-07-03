@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class Account {
+public abstract class Account {
+
 	private Customer customer;
 
 	private String accountNumber;
