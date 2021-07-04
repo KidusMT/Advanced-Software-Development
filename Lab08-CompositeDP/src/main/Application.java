@@ -12,10 +12,10 @@ public class Application {
         File studentsfile = new File("students.doc", 34252);
         cdrive.addDir(appdir);
         cdrive.addDir(datadir);
-        datadir.addDir(coursedir);
-        appdir.addFile(excelfile);
-        appdir.addFile(wordfile);
-        coursedir.addFile(studentsfile);
+        datadir.add(coursedir);
+        appdir.add(excelfile);
+        appdir.add(wordfile);
+        coursedir.add(studentsfile);
         cdrive.print();
     }
 }

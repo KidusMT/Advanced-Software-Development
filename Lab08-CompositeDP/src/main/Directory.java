@@ -2,11 +2,12 @@ package main;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
-public class Directory {
+public class Directory extends DriveComponent {
     protected String name;
-    protected Collection<File> fileList = new ArrayList<File>();
-    protected Collection<Directory> dirList = new ArrayList<Directory>();
+//    protected Collection<DriveComponent> fileList = new ArrayList<>();
+    protected Collection<DriveComponent> dirList = new ArrayList<>();
 
 
     public Directory(String name) {
@@ -14,31 +15,43 @@ public class Directory {
     }
 
     public void print() {
-        System.out.println("-- dir " + name + " size=" + computeSize() + " bytes");
-        for (Directory dir : dirList) {
-            dir.print();
+        System.out.println("-- dir " + name + " size=" + getSize() + " bytes");
+//        Iterator<DriveComponent> fileItr = dirList.iterator();
+
+        for (DriveComponent component : dirList) {
+            component.print();
         }
-        for (File file : fileList) {
-            file.print();
-        }
+//        for (Directory dir : dirList) {
+//            dir.print();
+//        }
+//        for (File file : fileList) {
+//            file.print();
+//        }
     }
 
-    public void addFile(File file) {
-        fileList.add(file);
-    }
+//    public void addFile(File file) {
+//        fileList.add(file);
+//    }
 
-    public void addDir(Directory directory) {
+//    public void addDir(Directory directory) {
+//        dirList.add(directory);
+//    }
+
+    public void add(DriveComponent directory) {
         dirList.add(directory);
     }
 
-    public int computeSize() {
+    public int getSize() {
         int sizeInBytes = 0;
-        for (File file : fileList) {
-            sizeInBytes += file.getSizeInBytes();
+        for (DriveComponent component : dirList) {
+            sizeInBytes += component.getSize();
         }
-        for (Directory dir : dirList) {
-            sizeInBytes += dir.computeSize();
-        }
+//        for (File file : fileList) {
+//            sizeInBytes += file.getSizeInBytes();
+//        }
+//        for (Directory dir : dirList) {
+//            sizeInBytes += dir.computeSize();
+//        }
         return sizeInBytes;
     }
 }

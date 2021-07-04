@@ -1,6 +1,6 @@
 package main;
 
-public class File {
+public class File extends DriveComponent {
     private final String name;
     private final int sizeInBytes;
 
@@ -9,11 +9,16 @@ public class File {
         this.sizeInBytes = sizeInBytes;
     }
 
-    public int getSizeInBytes() {
+    @Override
+    public int getSize() {
         return sizeInBytes;
     }
 
+//    public int getSizeInBytes() {
+//        return sizeInBytes;
+//    }
+
     public void print() {
-        System.out.println("--- file " + name + " size=" + getSizeInBytes() + "bytes");
+        System.out.println("--- file " + name + " size=" + getSize() + "bytes");
     }
 }
