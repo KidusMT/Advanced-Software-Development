@@ -2,15 +2,15 @@ package main;
 
 public class Drive {
     protected String name;
-    protected DriveComponent component;
+    protected DriveComponent driveComponent;
 
     public Drive(String name) {
         this.name = name;
-        component = new Directory(name);
+        driveComponent = new Directory(name);
     }
 
     public void addDir(DriveComponent directory) {
-        component.add(directory);
+        driveComponent.add(directory);
     }
 
     public int computeSize() {
@@ -22,12 +22,12 @@ public class Drive {
 //            sizeInBytes += dir.computeSize();
 //        }
 //        return sizeInBytes;
-        return component.getSize();
+        return driveComponent.getSize();
     }
 
     public void print() {
         System.out.println("- drive " + name);
-        component.print();
+        driveComponent.print();
 //        for (Directory dir : dirList) {
 //            dir.print();
 //        }
