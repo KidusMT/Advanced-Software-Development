@@ -14,10 +14,6 @@ public class File extends DriveComponent {
         return sizeInBytes;
     }
 
-//    public int getSizeInBytes() {
-//        return sizeInBytes;
-//    }
-
     public void print() {
         System.out.println("--- file " + name + " size=" + getSize() + "bytes");
     }
