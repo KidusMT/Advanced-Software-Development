@@ -1,12 +1,12 @@
 package main;
 
 public class CeilingFan {
-    int current_state = 0;
+//    int current_state = 0;
     private CeilingState ceilingState;
-    private CeilingState highState;
-    private CeilingState mediumState;
-    private CeilingState lowState;
-    private CeilingState offState;
+    private final CeilingState highState;
+    private final CeilingState mediumState;
+    private final CeilingState lowState;
+    private final CeilingState offState;
 
     public CeilingFan() {
         highState = new HighState(this);
