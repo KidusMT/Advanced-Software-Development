@@ -1,13 +1,5 @@
 package main;
 
-public class ComplexClass {
-
-    public ComplexClass() throws InterruptedException {
-        super();
-        Thread.sleep(10000);
-    }
-
-    public void veryComplicatedTask() {
-        System.out.println("Very complicated task...");
-    }
+public interface ComplexClass {
+    void veryComplicatedTask();
 }
