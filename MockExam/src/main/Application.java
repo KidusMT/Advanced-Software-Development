@@ -24,16 +24,29 @@ public class Application {
 //        ceo.accept(hireCounterAction);
 //        System.out.println(hireCounterAction.getCount());
 
+        // 1) getManagers() implementation
+        GetManagersAction getManagersAction = new GetManagersAction();
+        ceo.accept(getManagersAction);
+        System.out.println("----Managers----");
+        getManagersAction.getManagers().forEach(component -> System.out.println(component.getFirstName()+ " Position is: "+component.getPosition()));
+//        System.out.println(getManagersAction.getManagers());
+
+        // 2) getEmployees() implementation
+        GetEmployeeAction getEmployeeAction = new GetEmployeeAction();
+        ceo.accept(getEmployeeAction);
+        System.out.println("----Employees----");
+        getEmployeeAction.getEmployeeUnderManager().forEach(component -> System.out.println(component.getFirstName()+ " Position is: "+component.getPosition()));
+//        System.out.println(getEmployeeAction.getEmployeeUnderManager());
 
         // 3) getTotalSalary() implementation
-//        GetTotalSalaryAction getTotalSalaryAction = new GetTotalSalaryAction();
-//        ceo.accept(getTotalSalaryAction);
-//        System.out.println(getTotalSalaryAction.getTotalSalary());
+        GetTotalSalaryAction getTotalSalaryAction = new GetTotalSalaryAction();
+        ceo.accept(getTotalSalaryAction);
+        System.out.println(getTotalSalaryAction.getTotalSalary());
 
         // 4) getTotalAnnualSalary() implementation
-//        GetTotalAnnualSalaryAction getTotalAnnualSalaryAction = new GetTotalAnnualSalaryAction();
-//        ceo.accept(getTotalAnnualSalaryAction);
-//        System.out.println(getTotalAnnualSalaryAction.getTotalAnnualSalary());
+        GetTotalAnnualSalaryAction getTotalAnnualSalaryAction = new GetTotalAnnualSalaryAction();
+        ceo.accept(getTotalAnnualSalaryAction);
+        System.out.println(getTotalAnnualSalaryAction.getTotalAnnualSalary());
 
         // 5) getTotalAnnualBudget() implementation
         GetTotalAnnualBudgetAction getTotalAnnualBudgetAction = new GetTotalAnnualBudgetAction();
