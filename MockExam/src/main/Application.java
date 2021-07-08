@@ -31,8 +31,13 @@ public class Application {
 //        System.out.println(getTotalSalaryAction.getTotalSalary());
 
         // 4) getTotalAnnualSalary() implementation
-        GetTotalAnnualSalaryAction getTotalAnnualSalaryAction = new GetTotalAnnualSalaryAction();
-        ceo.accept(getTotalAnnualSalaryAction);
-        System.out.println(getTotalAnnualSalaryAction.getTotalAnnualSalary());
+//        GetTotalAnnualSalaryAction getTotalAnnualSalaryAction = new GetTotalAnnualSalaryAction();
+//        ceo.accept(getTotalAnnualSalaryAction);
+//        System.out.println(getTotalAnnualSalaryAction.getTotalAnnualSalary());
+
+        // 5) getTotalAnnualBudget() implementation
+        GetTotalAnnualBudgetAction getTotalAnnualBudgetAction = new GetTotalAnnualBudgetAction();
+        ceo.accept(getTotalAnnualBudgetAction);
+        System.out.println(getTotalAnnualBudgetAction.getTotalAnnualBudget());
     }
 }
