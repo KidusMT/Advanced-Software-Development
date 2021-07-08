@@ -17,7 +17,6 @@ public class Application {
         manager1.add(employee2);
         manager2.add(manager3);
         manager3.add(employee3);
-//        ceo.print();
 
         HireCounterAction visitor = new HireCounterAction();
         ceo.visit(visitor);

@@ -9,7 +9,6 @@ public class Employee extends HireComponent {
 
     @Override
     public void visit(Visitor action) {
-//    public void accept(Consumer<? extends HireComponent> action) {
         action.accept(this);
     }
 

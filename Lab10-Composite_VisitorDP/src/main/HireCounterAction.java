@@ -9,7 +9,7 @@ public class HireCounterAction implements Visitor{
 
     @Override
     public void accept(Manager manager) {
-        System.out.println(manager.getName());
+//        System.out.println(manager.getName());
         ++count;
         manager.components.forEach(hireComponent -> hireComponent.visit(this));
     }

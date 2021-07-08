@@ -10,8 +10,6 @@ public class CEO extends HireComponent{
     }
 
     public void hire(HireComponent directory) {
-//        manager.accept(directory);
-//        manager.visit();
         manager.add(directory);
     }
 
