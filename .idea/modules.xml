@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/Lab08-CompositeDP/Lab08-CompositeDP.iml" filepath="$PROJECT_DIR$/Lab08-CompositeDP/Lab08-CompositeDP.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab09-ProxyDP/Lab09-ProxyDP.iml" filepath="$PROJECT_DIR$/Lab09-ProxyDP/Lab09-ProxyDP.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab10-Composite_VisitorDP/Lab10-Composite_VisitorDP.iml" filepath="$PROJECT_DIR$/Lab10-Composite_VisitorDP/Lab10-Composite_VisitorDP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MockExam/MockExam.iml" filepath="$PROJECT_DIR$/MockExam/MockExam.iml" />
       <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
       <module fileurl="file://$PROJECT_DIR$/test2-forlab02/test2-forlab02.iml" filepath="$PROJECT_DIR$/test2-forlab02/test2-forlab02.iml" />
       <module fileurl="file://$PROJECT_DIR$/testFactoryMethod/testFactoryMethod.iml" filepath="$PROJECT_DIR$/testFactoryMethod/testFactoryMethod.iml" />
