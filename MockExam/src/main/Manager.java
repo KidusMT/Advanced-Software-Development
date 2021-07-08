@@ -40,5 +40,6 @@ public class Manager extends EmployeeComponent {
     @Override
     public void accept(Visitor action) {
         action.visit(this);
+        components.forEach(employeeComponent -> employeeComponent.accept(action));
     }
 }
