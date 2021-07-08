@@ -1,6 +1,6 @@
 package main;
 
-public class CEO {
+public class CEO extends HireComponent{
     protected String name;
     protected HireComponent manager;
 
@@ -9,4 +9,14 @@ public class CEO {
         manager = new Manager(name);
     }
 
+    public void hire(HireComponent directory) {
+//        manager.accept(directory);
+//        manager.visit();
+        manager.add(directory);
+    }
+
+    @Override
+    void visit(Visitor action) {
+        manager.visit(action);
+    }
 }

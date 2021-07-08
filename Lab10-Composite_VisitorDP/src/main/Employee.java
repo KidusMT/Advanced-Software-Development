@@ -1,16 +1,16 @@
 package main;
 
-import java.util.function.Consumer;
-
 public class Employee extends HireComponent {
-    private String name;
+    private final String name;
 
-    public Employee(String newName){
+    public Employee(String newName) {
         name = newName;
     }
 
     @Override
-    public void accept(Consumer<? extends HireComponent> action) {
-
+    public void visit(Visitor action) {
+//    public void accept(Consumer<? extends HireComponent> action) {
+        action.accept(this);
     }
+
 }

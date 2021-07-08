@@ -1,7 +1,9 @@
 package main;
 
-import java.util.function.Consumer;
-
 public abstract class HireComponent {
-    public abstract void accept(Consumer<? extends HireComponent> action);
+    //    public abstract void accept(Consumer<? extends HireComponent> action);
+    abstract void visit(Visitor action);
+    public void add(HireComponent component){
+        throw new UnsupportedOperationException();
+    }
 }
