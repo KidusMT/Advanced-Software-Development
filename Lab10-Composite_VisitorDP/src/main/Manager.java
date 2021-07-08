@@ -16,9 +16,9 @@ public class Manager extends HireComponent {
     }
 
     @Override
-    public void visit(Visitor action) {
-        action.accept(this);
-        components.forEach(hireComponent -> hireComponent.visit(action));
+    public void accept(Visitor action) {
+        action.visit(this);
+        components.forEach(hireComponent -> hireComponent.accept(action));
     }
 
     @Override

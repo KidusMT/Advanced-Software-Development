@@ -4,12 +4,12 @@ public class HireCounterAction implements Visitor {
     int count = 0;
 
     @Override
-    public void accept(Employee employee) {
+    public void visit(Employee employee) {
         ++count;
     }
 
     @Override
-    public void accept(Manager manager) {
+    public void visit(Manager manager) {
         ++count;
     }
 

@@ -14,7 +14,7 @@ public class CEO extends HireComponent{
     }
 
     @Override
-    void visit(Visitor action) {
-        manager.visit(action);
+    void accept(Visitor action) {
+        manager.accept(action);
     }
 }

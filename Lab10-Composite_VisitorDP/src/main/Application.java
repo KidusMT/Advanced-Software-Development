@@ -19,7 +19,7 @@ public class Application {
         manager3.add(employee3);
 
         HireCounterAction visitor = new HireCounterAction();
-        ceo.visit(visitor);
+        ceo.accept(visitor);
         System.out.println(visitor.getCount());
     }
 }

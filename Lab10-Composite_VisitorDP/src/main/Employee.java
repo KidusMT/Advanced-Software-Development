@@ -8,8 +8,8 @@ public class Employee extends HireComponent {
     }
 
     @Override
-    public void visit(Visitor action) {
-        action.accept(this);
+    public void accept(Visitor action) {
+        action.visit(this);
     }
 
 }
