@@ -20,8 +20,13 @@ public class Application {
         manager2.add(manager3);
         manager3.add(employee3);
 
-        HireCounterAction visitor = new HireCounterAction();
-        ceo.accept(visitor);
-        System.out.println(visitor.getCount());
+//        HireCounterAction hireCounterAction = new HireCounterAction();
+//        ceo.accept(hireCounterAction);
+//        System.out.println(hireCounterAction.getCount());
+
+
+        GetTotalSalaryAction getTotalSalaryAction = new GetTotalSalaryAction();
+        ceo.accept(getTotalSalaryAction);
+        System.out.println(getTotalSalaryAction.getTotalSalary());
     }
 }

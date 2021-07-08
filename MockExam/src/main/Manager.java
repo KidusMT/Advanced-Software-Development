@@ -13,7 +13,7 @@ public class Manager extends EmployeeComponent {
         super(employeeId, firstName, lastName, birthDate);
         // Default Values
         setPosition("Manager");
-        setSalary(getSalary() * 0.25);
+        setBonus(getSalary() * .25);
         setTeamBudget(1_000_000);
     }
 
