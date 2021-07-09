@@ -4,7 +4,7 @@ public class RealComplexClass implements ComplexClass{
 
     public RealComplexClass() throws InterruptedException {
         super();
-        Thread.sleep(10000);
+        Thread.sleep(5000);
     }
 
     public void veryComplicatedTask() {
