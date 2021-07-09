@@ -8,8 +8,15 @@ abstract class Component implements Iterable<Component> {
 
     public Iterator<Component> iterator() {
         throw new UnsupportedOperationException();
-//        ComponentCollector componentCollector = new ComponentCollector();
-//        this.accept(componentCollector);
-//        return componentCollector.getComponents().iterator();
     }
+
+//    public Iterator<Component> iterator() {
+//        if (this instanceof Composite) {
+//            ComponentCollector collector = new ComponentCollector();
+//            this.accept(collector);
+//            return collector.getComponents().iterator();
+//        } else {
+//            throw  new UnsupportedOperationException();
+//        }
+//    }
 }
