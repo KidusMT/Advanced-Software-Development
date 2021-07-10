@@ -20,7 +20,7 @@ public abstract class VisitorChain implements Visitor {
     // template method part.. where the steps are defined in the
     protected abstract void performVisit(Leaf leaf);
     protected abstract void performVisit(Composite composite);
-    public Visitor getNextVisitor(){
-        return nextVisitor;
-    }
+//    public Visitor getNextVisitor(){
+//        return nextVisitor;
+//    }
 }

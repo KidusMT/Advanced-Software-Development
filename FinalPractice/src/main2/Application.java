@@ -18,11 +18,13 @@ public class Application {
         ((Composite)component3).addComponent(leaf3);
         ((Composite)component3).addComponent(leaf4);
 
-//        ComponentCollector collectorVisitor = new ComponentCollector();
-        ComponentCounter counterVisitor = new ComponentCounter(new ComponentCollector());
+//        ComponentCounter counterVisitor = new ComponentCounter(new ComponentCollector());
+        ComponentCollector collectorVisitor = new ComponentCollector();
+        ComponentCounter counterVisitor = new ComponentCounter(collectorVisitor);
         component1.accept(counterVisitor);
 
         System.out.println(counterVisitor.count);
-        System.out.println(((ComponentCollector)counterVisitor.getNextVisitor()).getComponents());
+        System.out.println(collectorVisitor.getComponents());
+//        System.out.println(((ComponentCollector)counterVisitor.getNextVisitor()).getComponents());
     }
 }
