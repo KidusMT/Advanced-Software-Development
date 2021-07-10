@@ -1,8 +1,6 @@
 package main;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Employee {
     private String employeeId;
@@ -13,6 +11,7 @@ public class Employee {
     private Double salary;
     private String position;
     private Manager manager;
+
     public Employee(String employeeId, String firstName, String lastName, LocalDate birthDate) {
         this.employeeId = employeeId;
         this.firstName = firstName;
@@ -85,19 +84,19 @@ public class Employee {
         action.visit(this);
     }
 
-    public void acceptUpward(Visitor visitor){
-        if(manager!=null){
+    public void acceptUpward(Visitor visitor) {
+        if (manager != null) {
             visitor.visit(manager);
             manager.acceptUpward(visitor);
         }
     }
 
-    public void setManager(Manager manager){
-        this.manager = manager;
+    public Manager getManager() {
+        return manager;
     }
 
-    public Manager getManager(){
-        return manager;
+    public void setManager(Manager manager) {
+        this.manager = manager;
     }
 
 }
