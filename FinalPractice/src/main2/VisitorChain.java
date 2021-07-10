@@ -1,6 +1,7 @@
 package main2;
 
 public abstract class VisitorChain implements Visitor {
+    //TODO
     private Visitor nextVisitor;
     public VisitorChain(Visitor nextVisitor) {
         super();
@@ -19,4 +20,7 @@ public abstract class VisitorChain implements Visitor {
     // template method part.. where the steps are defined in the
     protected abstract void performVisit(Leaf leaf);
     protected abstract void performVisit(Composite composite);
+    public Visitor getNextVisitor(){
+        return nextVisitor;
+    }
 }

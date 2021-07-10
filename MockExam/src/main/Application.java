@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Application {
 
     public static void main(String[] args) {
-        CEO ceo = new CEO("ABC1231", "John", "CEO", LocalDate.now());//LocalDate.of(1996, 2, 15)
+        Manager ceo = new Manager("ABC1231", "John", "CEO", LocalDate.now());//LocalDate.of(1996, 2, 15)
         Manager manager1 = new Manager("ABC1232", "Tom", "Hanks", LocalDate.now());
         Manager manager2 = new Manager("ABC1233", "Leonardo", "DiCaprio", LocalDate.now());
         Manager manager3 = new Manager("ABC1234", "Johnny", "Depp", LocalDate.now());
@@ -13,12 +13,13 @@ public class Application {
         Employee employee2 = new Employee("ABC1236", "Will", "Smith", LocalDate.now());
         Employee employee3 = new Employee("ABC1237", "Brad", "Pitt", LocalDate.now());
 
-        ceo.hire(manager1);
-        ceo.hire(manager2);
-        manager1.add(employee1);
-        manager1.add(employee2);
-        manager2.add(manager3);
-        manager3.add(employee3);
+        ceo.addTeamMember(manager1);
+        ceo.addTeamMember(manager2);
+        manager1.addTeamMember(employee1);
+        manager1.addTeamMember(employee2);
+        manager2.addTeamMember(manager3);
+        manager3.addTeamMember(employee3);
+
 
 //        HireCounterAction hireCounterAction = new HireCounterAction();
 //        ceo.accept(hireCounterAction);
@@ -26,7 +27,7 @@ public class Application {
 
         // 1) getManagers() implementation
         GetManagersAction getManagersAction = new GetManagersAction();
-        ceo.accept(getManagersAction);
+        employee2.acceptUpward(getManagersAction);
         System.out.println("----Managers----");
         getManagersAction.getManagers().forEach(component -> System.out.println(component.getFirstName()+ " Position is: "+component.getPosition()));
 //        System.out.println(getManagersAction.getManagers());

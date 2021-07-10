@@ -3,11 +3,12 @@ package main;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
-public class Manager extends EmployeeComponent {
-    protected Collection<EmployeeComponent> components = new ArrayList<>();
+public class Manager extends Employee {
     private double bonus;
     private double teamBudget;
+    private List<Employee> teamMembers = new ArrayList<>();
 
     public Manager(String employeeId, String firstName, String lastName, LocalDate birthDate) {
         super(employeeId, firstName, lastName, birthDate);
@@ -15,10 +16,6 @@ public class Manager extends EmployeeComponent {
         setPosition("Manager");
         setBonus(getSalary() * .25);
         setTeamBudget(1_000_000);
-    }
-
-    public void add(EmployeeComponent component) {
-        components.add(component);
     }
 
     public double getBonus() {
@@ -37,9 +34,18 @@ public class Manager extends EmployeeComponent {
         this.teamBudget = teamBudget;
     }
 
+    public void addTeamMember(Employee employee){
+        teamMembers.add(employee);
+        employee.setManager(this);
+    }
+
+    public List<Employee> getTeamMembers(){
+        return teamMembers;
+    }
+
     @Override
     public void accept(Visitor action) {
         action.visit(this);
-        components.forEach(employeeComponent -> employeeComponent.accept(action));
+        teamMembers.forEach(e -> e.accept(action));
     }
 }

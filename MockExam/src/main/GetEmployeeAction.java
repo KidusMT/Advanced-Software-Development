@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GetEmployeeAction implements Visitor {
-    List<EmployeeComponent> employeeComponents = new ArrayList<>();
+    List<Employee> employeeComponents = new ArrayList<>();
 
     @Override
     public void visit(Employee employee) {
@@ -13,10 +13,10 @@ public class GetEmployeeAction implements Visitor {
 
     @Override
     public void visit(Manager manager) {
-
+        employeeComponents.add(manager);
     }
 
-    public List<EmployeeComponent> getEmployeeUnderManager() {
+    public List<Employee> getEmployeeUnderManager() {
         return employeeComponents;
     }
 }
