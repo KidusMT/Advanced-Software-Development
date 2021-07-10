@@ -84,10 +84,10 @@ public class Employee {
         action.visit(this);
     }
 
-    public void acceptUpward(Visitor visitor) {
+    public void acceptUpward(Visitor action) {
         if (manager != null) {
-            visitor.visit(manager);
-            manager.acceptUpward(visitor);
+            action.visit(manager);
+            manager.acceptUpward(action);
         }
     }
 

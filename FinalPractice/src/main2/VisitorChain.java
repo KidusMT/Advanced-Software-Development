@@ -1,7 +1,6 @@
 package main2;
 
 public abstract class VisitorChain implements Visitor {
-    //TODO
     private Visitor nextVisitor;
     public VisitorChain(Visitor nextVisitor) {
         super();
